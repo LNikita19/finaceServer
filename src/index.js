@@ -12,8 +12,13 @@ const transactionRoutes = require('./Routes/transactionRoutes');
 const app = express();
 
 
-const allowedOrigins = ['http://localhost:5000', 'http://localhost:5173', 'https://finace-server.vercel.app', 'http://localhost:3000'];
-
+const allowedOrigins = [
+  'http://localhost:5000',
+  'http://localhost:5173',
+  'https://finace-server.vercel.app',
+  'http://localhost:3000',
+  'https://finance-user.vercel.app' // ✅ add this
+];
 // Configure CORS middleware
 app.use(cors({
   origin: function (origin, callback) {
